@@ -6,7 +6,7 @@ RSpec.describe "GET #index" do
     item1 = items(:clock)
     item2 = items(:computer)
 
-    get "api/v1/items"
+    get "/api/v1/items"
 
     expect(response.status).to eq (200)
 
