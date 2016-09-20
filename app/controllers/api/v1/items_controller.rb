@@ -7,6 +7,10 @@ class Api::V1::ItemsController < ApplicationController
 
   def show
    render json: Item.find(params[:id])
- end
+  end
+
+  def destroy
+    render json: Item.destroy(params[:id])
+  end
 
 end

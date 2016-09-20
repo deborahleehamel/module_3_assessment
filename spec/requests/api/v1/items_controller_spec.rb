@@ -21,11 +21,22 @@ require "rails_helper"
     get "/api/v1/items/#{item.id}"
 
     expect(response.status).to eq (200)
-    assert_response :success
     items = JSON.parse(response.body)
 
     expect(items["name"]).to eq item.name
     expect(items["description"]).to eq item.description
     expect(items["image_url"]).to eq item.image_url
   end
+
+  scenario "it deletes a single item" do
+    item1 = items(:clock)
+    item2 = items(:computer)
+
+    expect(Item.count).to eq(2)
+
+    delete "/api/v1/items/#{item1.id}"
+
+    expect(Item.count).to eq(1)
   end
+
+end
