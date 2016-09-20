@@ -27,5 +27,11 @@ RSpec.describe "User can search for nearest locations" do
       expect(page).to have_content("Store Type")
     end
 
+    # "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
+    #   "city": "Denver",
+    #   "distance": 3.25,
+    #   "phone": "303-270-9189",
+    #   "storeType": "Mobil
+
   end
 end
