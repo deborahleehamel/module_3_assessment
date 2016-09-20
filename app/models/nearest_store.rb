@@ -1,6 +1,6 @@
 class NearestStore
   attr_reader :id, :long_name, :city, :distance, :phone, :store_type,
-              :name, :address, :city, :state, :zipcode
+              :name, :address, :state, :zipcode
 
   def initialize(data)
     @long_name  = data["longName"]
@@ -22,7 +22,7 @@ class NearestStore
   def self.all(zipcode)
     raw_data = service.nearest_stores(zipcode)
     raw_data["stores"].map do |info|
-      new(info)
+      NearestStore.new(info)
     end
   end
 end
