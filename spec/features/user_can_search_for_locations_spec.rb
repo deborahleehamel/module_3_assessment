@@ -7,7 +7,7 @@ RSpec.describe "User can search for nearest locations" do
     # And I fill in a search box with "80202" and click "search"
     fill_in("search", with: "80202")
 
-    click_on("submit")
+    click_button "search"
 
     expect(current_path).to eq search_path
 
@@ -26,6 +26,6 @@ RSpec.describe "User can search for nearest locations" do
       expect(page).to have_content("Phone Number")
       expect(page).to have_content("Store Type")
     end
-    
+
   end
 end

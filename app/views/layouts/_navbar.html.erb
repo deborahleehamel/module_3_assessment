@@ -11,6 +11,13 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li>
+        <%= form_tag("/search", method: "get") do %>
+          <%= label_tag(:search, "Search with zip:") %>
+          <%= text_field_tag(:search) %>
+          <%= submit_tag("search") %>
+        <% end %>
+      </li>
+      <li>
         <a href="/">Items</a>
       </li>
       <li>
