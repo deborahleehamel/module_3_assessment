@@ -1,0 +1,9 @@
+clock:
+  name: clock
+  description: keeps great time
+  image_url: http://robohash.org/0.png?set=set2&bgset=bg1&size=200x200
+
+computer:
+  name: computer
+  description: good for organizing electrons
+  image_url: http://robohash.org/1.png?set=set2&bgset=bg1&size=200x200
