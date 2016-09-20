@@ -21,7 +21,7 @@ class NearestStore
 
   def self.all(zipcode)
     raw_data = service.nearest_stores(zipcode)
-    raw_data["stores"].map do |info|
+    raw_data[:stores].map do |info|
       NearestStore.new(info)
     end
   end
